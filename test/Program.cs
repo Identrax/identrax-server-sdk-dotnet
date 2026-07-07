@@ -3,7 +3,7 @@ using Identrax;
 
 // Cross-language vector pin. Run: dotnet run --project test
 var vectors = JsonDocument.Parse(
-    File.ReadAllText("../fixtures/crypto_vectors.json")).RootElement;
+    File.ReadAllText("../../../api-spec/examples/crypto_vectors.json")).RootElement;
 int failures = 0;
 void Check(bool condition, string name)
 {

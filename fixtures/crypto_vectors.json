@@ -1,0 +1,29 @@
+{
+  "canonical_challenge_format": "identrax.v2|{action}|{audience}|{challenge_id}|{nonce}|{expires_at_unix}",
+  "description": "Cross-language crypto vectors for Identrax v2 SDKs. Deterministic; regenerate with `cargo run -p crypto --example gen_vectors`.",
+  "ed25519": {
+    "message_utf8": "identrax.v2|login|identrax|chal_0102030405060708090a0b0c0d|dGVzdC1ub25jZQ|1780000000",
+    "public_key_b64url": "11qYAYKxCrfVS_7TyWQHOg7hcvPapiMlrwIaaPcHURo",
+    "seed_hex": "9d61b19deffd5a60ba844af492ec2cc44449c5697b326919703bac031cae7f60",
+    "signature_b64url": "GSEu84VtcYANKAWllxrjvl55i3ABGqopYAnsbMVcytivLCT7na1WFDmXY-NSiOfW1rEaduzjcshIcozcJDq4BQ"
+  },
+  "sha256": [
+    {
+      "hash_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+      "input_utf8": "abc"
+    },
+    {
+      "comment": "nin_hash: sha256 over the trimmed NIN string",
+      "hash_hex": "254aa248acb47dd654ca3ea53f48c2c26d641d23d7e2e93a1ec56258df7674c4",
+      "input_utf8": "12345678901",
+      "last4": "8901"
+    }
+  ],
+  "webhook_hmac": {
+    "comment": "X-Webhook-Signature: t=<unix_ts>,v1=hex(hmac_sha256(secret, '{t}.{body}'))",
+    "secret_utf8": "whsec_test_secret",
+    "timestamp": 1780000000,
+    "body_utf8": "{\"event\":\"consent.approved\"}",
+    "header": "t=1780000000,v1=2dd444e58bb0ab43e0b7e6ad8a4134a8d4d006ca5a4b9e55b6fadd9facfe2e14"
+  }
+}

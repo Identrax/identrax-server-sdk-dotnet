@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Identrax</RootNamespace>
+    <PackageId>Identrax.Sdk</PackageId>
+    <Description>Identrax v2 server-side SDK: org client, webhook signature verification, and Ed25519 verifiers for the canonical /v2 formats.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.4.0" />
+  </ItemGroup>
+</Project>
